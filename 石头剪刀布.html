@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name='game' content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 800px;
+      height: 400px;
+      margin: auto;
+      text-align: center;
+    }
+
+    button {
+      width: 100px;
+      height: 40px;
+      background-color: blanchedalmond;
+      border-radius: 3px;
+      font-size: 20px;
+      color: #5d5de4;
+      text-shadow: 0px 1px 0px #c0c0c0,
+        0px 2px 0px #b0b0b0,
+        0px 3px 0px #a0a0a0,
+        0px 4px 0px #909090,
+        0px 5px 10px rgba(0, 0, 0, .9);
+    }
+
+    p {
+      font-size: 30px;
+      color: #fefefe;
+      text-shadow: 0px 1px 0px #c0c0c0,
+        0px 2px 0px #b0b0b0,
+        0px 3px 0px #a0a0a0,
+        0px 4px 0px #909090,
+        0px 5px 10px rgba(0, 0, 0, .9);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>Let's begin</p>
+    <button onclick="
+    let s = shengcheng()
+    if (s === 'stone'){
+      alert('平局')
+    }
+    if (s === 'scissor'){
+      alert('你赢了')
+    }
+    if (s === 'paper'){
+      alert('你输了')
+    }">石头</button>
+    <button onclick="
+    let a = shengcheng()
+    if (a === 'scissor'){
+      alert('平局')
+    }
+    if (a === 'paper'){
+      alert('你赢了')
+    }
+    if (a === 'stone'){
+      alert('你输了')}">剪刀</button>
+
+    <button onclick="
+      let b = shengcheng()
+      if (b === 'paper'){
+        alert('平局')
+      }
+      if (b === 'stone'){
+        alert('你赢了')
+      }
+      if (b === 'scissor'){
+        alert('你输了')}">布</button>
+  </div>
+  <script>
+    function shengcheng() {
+      let c = Math.random()
+
+      if (c <= 1 / 3) {
+        return "stone"
+      }
+      else if (c > 1 / 3 && c <= 2 / 3) {
+        return "scissor"
+      }
+      else {
+        return "paper"
+      }
+
+    }
+  </script>
+</body>
+
+</html>
